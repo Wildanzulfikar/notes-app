@@ -32,6 +32,7 @@ class NoteApp extends React.Component {
           {
             id: +new Date(),
             title,
+            createdAt: new Date().toISOString(),
             body,
           } 
         ]
@@ -46,7 +47,7 @@ class NoteApp extends React.Component {
       <div className="note-app__body">
         <FormApp addNote={this.onAddNoteHandler}/>
         <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler}/>
-        <NoteArsip />
+        {/* <NoteArsip /> */}
       </div>
     </>
     )

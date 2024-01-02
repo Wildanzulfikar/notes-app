@@ -41,8 +41,8 @@ class FormApp extends React.Component {
             <div className="note-input">
                 <h2>Buat Catatan</h2>
                 <form onSubmit={this.onSubmitEventHandler}>
-                    <p className="note-input__title__char-limit">Sisa Karakter : 50</p>
-                    <input className="note-input__title" type="text" placeholder="ini adalah judul ..." value={this.state.title} onChange={this.onTitleChangeEventHandler}/>
+                    {/* <p className="note-input__title__char-limit">Sisa Karakter : 50</p> */}
+                    <input className="note-input__title" type="text" placeholder="ini adalah judul ..." value={this.state.title} onChange={this.onTitleChangeEventHandler} required/>
                     <textarea className="note-input__body" placeholder="Buat catatanmu disini ..." value={this.state.body} onChange={this.onBodyChangeEventHandler}></textarea>
                     <button type="submit">Buat</button>
                 </form>
