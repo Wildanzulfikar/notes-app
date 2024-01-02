@@ -2,8 +2,6 @@ import React from "react";
 import NavApp from "./NavApp";
 import FormApp from "./FormApp";
 import {getInitialData} from '../utils/index';
-import { showFormattedDate } from "../utils/index";
-import NoteArsip from "./NoteArsip";
 import NoteList from "./NoteList";
 
 class NoteApp extends React.Component {
@@ -34,9 +32,10 @@ class NoteApp extends React.Component {
             title,
             createdAt: new Date().toISOString(),
             body,
+            Archived: false
           } 
         ]
-      }
+      };
     });
   }
 
